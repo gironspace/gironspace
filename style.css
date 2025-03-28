@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+header {
+    background-color: #161e90;
+    color: white;
+    padding: 15px;
+}
+nav {
+    background-color: #2a34c4;
+    padding: 10px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+main {
+    padding: 20px;
+    padding-bottom: 60px; /* Added padding to prevent footer overlap */
+}
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+footer {
+    background-color: #161e90;
+    color: white;
+    padding: 7px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+.logos-section {
+    display: flex; /* Arrange images in a row */
+    justify-content: flex-start;
+    /*justify-content: center; /* Center them horizontally */
+    align-items: left; /* Align them properly */
+    gap: 20px; /* Space between logos */
+    margin: 20px 0; /* Add some margin */
+}
+
+.logo {
+    width: 80px; /* Adjust the size of logos */
+    height: auto; /* Keep aspect ratio */
+    transition: transform 0.2s ease-in-out; /* Add hover effect */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
