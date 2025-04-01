@@ -28,7 +28,7 @@ nav ul li a {
 }
 main {
     padding: 20px;
-    padding-bottom: 60px; /* Added padding to prevent footer overlap */
+    padding-bottom: 10px; /* Added padding to prevent footer overlap */
 }
 .content {
     max-width: 800px;
@@ -43,7 +43,7 @@ footer {
     background-color: #161e90;
     color: white;
     padding: 7px;
-    position: fixed;
+    position: bottom;
     bottom: 0;
     width: 100%;
 }
