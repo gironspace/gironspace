@@ -78,7 +78,7 @@ footer {
 }
 
 .logo {
-    width: 80px; /* Adjust the size of logos */
+    width: 90px; /* Adjust the size of logos */
     height: auto; /* Keep aspect ratio */
     transition: transform 0.2s ease-in-out; /* Add hover effect */
 }
