@@ -62,10 +62,9 @@
             <div class="aptas-content">
                 <h2>Status</h2>
                 <p><strong>Running since:</strong> 2024</p>
-                <p><strong>Number of students:</strong> 20</p>
+                <p><strong>Number of students:</strong> 18</p>
                 <p><strong>Management:</strong>
                         <ul>
-                            <li>Albin Ringström</li>
                             <li>Filippa Ekholm</li>
                             <li>Joel Åström</li>
                         </ul>
@@ -76,17 +75,26 @@
 
         <section class="content">
             <h2>Gamma Light Interference in Technological Circuitry and Hardware</h2>
-            <p>GLITCH is a student project created by students at Luleå University of Technology. The project will create an experiment that measures the Single Event Upsets (SEU) in electronical hardware in a stratospheric Earth environment. The experiment aims to understand the rate at which these</p>
-            <p>SEUs occur with regards to factors of operating at a higher Earth latitude and during the 25th solar maximum.</p>
-            <p>The goal of the project is to design, assemble, test and fly the experiment within the BEXUS program. The project team is divided into different subteams such as electronical, software, mechanical, PR and management, all tasked with their respective parts of the project.</p>
-            <p>The end goal of the project is to answer how much of a threat to stratospheric operations the environment around Kiruna poses with regards to the increased radiation experienced during a solar cycle peak. This would in turn help future missions with information necessary to design properly protected equipment and hardware in a world where innovations like FPGAs and A.I require an increasing amount of integrated circuitry.</p>
+            <p>GLITCH is a project created by students at Luleå University of Technology (LTU). The project aims to create an experiment that measures the Single Event Upsets (SEU) experienced by electronic hardware in a stratospheric environment. The objective of the experiment is to understand the rate at which these SEUs occur with regards to high latitude of Kiruna and the 25th solar maximum.</p>
+            <p>The goal of the project is to design, assemble, test and fly the experiment within the REXUS/BEXUS program. The project team is divided into different subteams such as electrical, software, mechanical, outreach, science and management, all tasked with their respective parts of the project.</p>
+            <p>Ideally the data collected by the experiment would give insight to how much of a threat the combination of the environment around Kiruna and the solar maximum poses to stratospheric operations. This would in turn help future missions make informed design decisions to properly protect equipment and hardware.</p>
         </section>
 
         <section class="content">
-            <h2>Payload/science</h2>
-            <p>Device Under Testing (DUT):</p>
-            <p>Static Random Access Memory (SRAM) is a type of volatile memory, requiring a constant source of power to tore and maintain memory. It is constructed using a flip-flop circuit with one state representing 0 and the other representing 1. The mechanism storing the states consists of 4 transistors, as well as an additional 2 transistors for reading and writing to the memory. This is different from Dynamic Random Access Memory (DRAM), another type of volatile memory, which requires periodic power pulses to store memory. The reason for this is because DRAM stores its bit value in a capacitor that slowly loses charge over time.</p>
-            <p>The reason why SRAM is more susceptible to SEUs than DRAM is because of the transistors. Whilst capacitors are relatively hard to influence by a small voltage, transistors can easily be influenced by a charged particle. This is becoming a growing problem since newer technology allows for smaller transistors holding smaller voltages and therefore being more affected by a small voltage passing through them, such as that of a charged particle.</p>
+            <h2>REXUS/BEXUS</h2>
+            <p>REXUS/BEXUS is a collaboration between the German Aerospace Center (Deutsches Zentrum für Luft- und Raumfahrt) and the Swedish National Space Agency. The purpose of REXUS/BEXUS is to provide students from European universities with the opportunity to conduct scientific and technical experiments using research rockets and high-altitude balloons.</p>
+            <p>REXUS is a research rocket that is launched from Esrange Space Center.</p>
+            <p>BEXUS consists of high-altitude balloons that are also released from Esrange Space Center. The balloons fly at an altitude of 20-30 kilometers for approximately five hours.</p>
+        </section>
+    
+        <section class="content">
+            <h2>The GLITCH box</h2>
+            <p>The experiment will be housed in the GLITCH box. Within the box there will be several SRAM chips which will be monitored and checked for errors by an Field Progammable Gate Array (FPGA). The FPGA will run software that checks for errors, if any are detected they are logged and corrected. In addition to this, there will also be a radiation sensor  that continuously measures radiation. The box will also house other sensors that monitor vital parameters and ensure smooth operations.</p>
+        </section>
+    
+        <section class="content">
+            <h2>What is an SEU</h2>
+            <p>Bits of data are stored as 0s and 1s. When a high-energy particle from space hits a sensitive area it induces a current which can cause an unwanted ”flip” in one of these bits, changing a 0 to a 1 or vice versa. The flipping of bit logic (bitflip) is also referred to as a Single Event Upset (SEU). Although not always damaging hardware, internal software logic may be corrupted, resulting in glitches and malfunction.</p>
         </section>
 
         <section class="content">
