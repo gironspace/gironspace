@@ -68,39 +68,34 @@
             <div class="aptas-content">
                 <h2>Status</h2>
                 <p><strong>Running since:</strong> 2020</p>
-                <p><strong>Number of students:</strong> 23</p>
-                <p><strong>Management:</strong>
-                <ul>
-                    <li>Meeri Mäkitalo</li>
-                    <li>Brice Fauré</li>
-                    <li>Satbir Singh Sohal</li>
-                    <li>Shivani Venkatraj</li>
-                    <li>Biruk Terefe Getu</li>
-                </ul>
-                </p>
+                <p><strong>Current members:</strong> 18</p>
+                <p><strong>Total number of students involved:</strong> 103</p>
+                <p><strong>Project manager:</strong> Shivani Venkatraj </p>
             </div>
             <img src="images/aptas.png" alt="APTAS Logo" class="aptas-logo">
         </section>
         
         <section class="content">
             <h2>Project Introduction</h2>
-            <p>The Atmospheric Polar Transmission Alignment Satellite (APTAS) is the first student CubeSat developed at Luleå University of Technology. The project’s goal is to design, build, test, and operate a 1U CubeSat for scientific and educational purposes whilst paving the way for future generations of students who want to develop their own CubeSats!</p>
+            <p>The Atmospheric Polar Transmission Alignment Satellite (APTAS) is the first student CubeSat developed at Luleå University of Technology. The goal of the project's is to design, build, test and operate a 1U CubeSat for scientific and educational purposes. The project should also act to enable future CubeSat projects within the university.</p>
             <p><strong>Dimensions:</strong> 10x10x10 cm</p>
             <p><strong>Mass:</strong> 1 kg</p>
-            <p><strong>Method of attitude stabilization:</strong> Magnetorquers</p>
+            <p><strong>Actuators:</strong> Magnetorquers</p>
+            <p><strong>Attitude sensors:</strong> Course Sun Sensors (CSS), magnetometers and MEMS gyroscope</p>
+            <p><strong>Frequency:</strong> 432-438MHz</p>
         </section>
         
         <section class="content">
             <h2>The Satellite</h2>
             <img src="images/APTASstack.png" alt="APTAS Satellite">
-            <p>The Umbilical board is the top of the satellite stack and interfaces with our debug and testing equipment. It is also digitizing the satellite’s sun sensor signals.</p>
-            <p>The EISCAT Calibration Transmitter (ECAT) is the main payload of the satellite. It generates a 233 MHz reference signal which will be used to calibrate the phased array antennas of EISCAT’s Next Generation Geospace Rader, EISCAT 3D. Also this part of the satellite is made by our students, orientated to the requirements given by EISCAT.</p>
-            <p>The Camera is the secondary payload of the satellite and an of-the-shelf component that we have integrated into our satellite. It will be used to take pictures of Earth’s surface from above. These pictures will be used by LTU for scientific purposes.</p>
-            <p>We use a Step-up board to align connections within the satellite. This is necessary, as the limited space on board of the CubeSat makes the wireing a bit complicated. Also, this component was fully develope by our students.</p>
-            <p>The satellite is powered by the Electrical Power System (EPS), also a COTS component that we have integrated into the satellites design. It includes the satellite’s batteries and distributes power to the other components of the satellite.</p>
-            <p>A Transceiver receives telecommands from our ground station.</p>
-            <p>Onboard Computer (OBC) serves as the brain of our satellite and is installed on the Motherboard.</p>
-            <p>Antenna at the bottom of the satellite is used for transmission of the ECAT signal as well as for reception of telecommands.</p>
+            <p>The Umbilical board sits at the top of the satellite stack and provides an external interface. The main purpose being for connecting to ground support equipment as well as providing access for debug and testing. The board also contains the ADCs digitizing the signals from the CSS.</p>
+            <p>The EISCAT Calibration Transmitter (ECAT) is the main payload of the satellite. It generates a stable 233 MHz reference signal which will be used to calibrate the phased array antennas of EISCAT's next generation geospace radar, EISCAT 3D. This board has been developed by students with support from EISCAT.</p>
+            <p>The CAM is the secondary payload and an of-the-shelf (OTS) CMOS camera and lens. It will be used to photograph the surface of the Earth. The main purpose are to use these images will be used for outreach by LTU while also being of scientific value.</p>
+            <p>An intermediate board called the Step-Up board acts to reroute signals of the main connector stack due to space constraints.</p>
+            <p>Power is managed by the Electrical Power System (EPS), another COTS component. It houses the satellite's batteries, manages charging and distributes power to the other components of the satellite.</p>
+            <p>The Transceiver receives telecommands and encodes telemetry. Communication is achieved over the CubeSat Space Protocol (CSP)</p>
+            <p>The onboard Computer (OBC) serves as the brain of our satellite and is installed on the Motherboard.</p>
+            <p>The antenna module of the satellite is used for transmission of the ECAT signal as well as for reception of telecommands and transmission of telemetry.</p>
         </section>
         
         <section class="content">
@@ -108,41 +103,19 @@
             <p><strong>ECAT board</strong></p>
             <img src="images/ECAT.png" alt="APTAS ECAT" class="aptas-cam">
             <ul>
-                <li>Developed according to EISCAT's requirements</li>
+                <li>Developed according to EISCAT's specifications</li>
                 <li>Generates a precise 233 MHz reference signal which will be used for antenna calibration of EISCAT 3D</li>
-                <li>Designed, manufactured, and assembled by our studentsin Kiruna</li>
+                <li>Designed, manufactured, and assembled by our students in Kiruna</li>
             </ul>
         </section>
         
         <section class="content">
             <h2>Secondary Payload</h2>
-            <p><strong>Camera</strong></p>
+            <p><strong>CAM</strong></p>
             <img src="images/APTASCAM.png" alt="APTAS CAM" class="aptas-cam">
             <ul>
-                <li>Additional payload for the satellite</li>
-                <li>Testing capabilities of capturing images of the Earth and auroras from orbit</li>
-            </ul>
-        </section>
-        
-        <section class="content">
-            <h2>Our Teams</h2>
-            <h3>Mechanical & Electrical</h3>
-            <ul>
-                <li>Our engineering team, that actually builds the satellite</li>
-                <li>They design and manufacture the satellite’s components and integrate them</li>
-                <li>The team also tests the system at whole as well as all its subsystems through their paces</li>
-            </ul>
-            <h3>Communications</h3>
-            <ul>
-                <li>Our Communications team makes sure, that our satellite listens to us</li>
-                <li>They are devoloping a ground station at the university’s campus</li>
-                <li>They implement and test telecommands  and the satellites communication</li>
-            </ul>
-            <h3>OBDH & ADCS</h3>
-            <ul>
-                <li>Responsible for designing the software of the satellite</li>
-                <li>Taking care of onboard data handling</li>
-                <li>Writing the attitude control software to keep the satellite in its place</li>
+                <li>Testing capabilities of capturing images of the Earth and high latitude atmospheric phenomena such as aurora from orbit</li>
+                <li>Generates outreach</li>
             </ul>
         </section>
         
