@@ -68,82 +68,93 @@
             <div class="aptas-content">
                 <h2>Status</h2>
                 <p><strong>Running since:</strong> 2020</p>
-                <p><strong>Number of students:</strong> 23</p>
-                <p><strong>Management:</strong>
-                <ul>
-                    <li>Meeri Mäkitalo</li>
-                    <li>Brice Fauré</li>
-                    <li>Satbir Singh Sohal</li>
-                    <li>Shivani Venkatraj</li>
-                    <li>Biruk Terefe Getu</li>
-                </ul>
-                </p>
+                <p><strong>Current members:</strong> 18</p>
+                <p><strong>Total number of students involved:</strong> 103</p>
             </div>
             <img src="images/aptas.png" alt="APTAS Logo" class="aptas-logo">
         </section>
         
         <section class="content">
             <h2>Project Introduction</h2>
-            <p>The Atmospheric Polar Transmission Alignment Satellite (APTAS) is the first student CubeSat developed at Luleå University of Technology. The project’s goal is to design, build, test, and operate a 1U CubeSat for scientific and educational purposes whilst paving the way for future generations of students who want to develop their own CubeSats!</p>
-            <p><strong>Dimensions:</strong> 10x10x10 cm</p>
+            <p>
+                The Atmospheric Polar Transmission Alignment Satellite (APTAS) is the first student CubeSat developed at Luleå University of Technology (LTU). 
+                The goal of the project is to design, build, test, and operate a 1U CubeSat. 
+                The project also aims to enable future CubeSat projects within the university.
+            </p>
+            <p><strong>Dimensions:</strong> 10 × 10 × 10 cm</p>
             <p><strong>Mass:</strong> 1 kg</p>
-            <p><strong>Method of attitude stabilization:</strong> Magnetorquers</p>
+            <p><strong>Actuators:</strong> Magnetorquer coils</p>
+            <p><strong>Attitude sensors:</strong> Coarse Sun Sensors (CSS), magnetometers, and a MEMS gyroscope</p>
+            <p><strong>Frequency:</strong> 432 to 438 MHz</p>
         </section>
-        
+
         <section class="content">
             <h2>The Satellite</h2>
+            <p>
+                The satellite subsystems and payload are composed of multiple boards and components stacked and interconnected through a pin stack.
+            </p>
             <img src="images/APTASstack.png" alt="APTAS Satellite">
-            <p>The Umbilical board is the top of the satellite stack and interfaces with our debug and testing equipment. It is also digitizing the satellite’s sun sensor signals.</p>
-            <p>The EISCAT Calibration Transmitter (ECAT) is the main payload of the satellite. It generates a 233 MHz reference signal which will be used to calibrate the phased array antennas of EISCAT’s Next Generation Geospace Rader, EISCAT 3D. Also this part of the satellite is made by our students, orientated to the requirements given by EISCAT.</p>
-            <p>The Camera is the secondary payload of the satellite and an of-the-shelf component that we have integrated into our satellite. It will be used to take pictures of Earth’s surface from above. These pictures will be used by LTU for scientific purposes.</p>
-            <p>We use a Step-up board to align connections within the satellite. This is necessary, as the limited space on board of the CubeSat makes the wireing a bit complicated. Also, this component was fully develope by our students.</p>
-            <p>The satellite is powered by the Electrical Power System (EPS), also a COTS component that we have integrated into the satellites design. It includes the satellite’s batteries and distributes power to the other components of the satellite.</p>
-            <p>A Transceiver receives telecommands from our ground station.</p>
-            <p>Onboard Computer (OBC) serves as the brain of our satellite and is installed on the Motherboard.</p>
-            <p>Antenna at the bottom of the satellite is used for transmission of the ECAT signal as well as for reception of telecommands.</p>
+            <p>
+                The <strong>Umbilical board</strong> sits at the top of the satellite stack and provides the primary external interface while on the ground. 
+                It enables connection to ground support equipment as well as access for debugging and testing. 
+                The board also houses the ADCs that digitize the signals from the CSSs.
+            </p>
+            <p>
+                The <strong>EISCAT Calibration Transmitter (ECAT)</strong> is the main payload of the satellite. 
+                It generates a stable 233 MHz reference signal that will be used to calibrate the phased array antennas of EISCAT’s next-generation geospace radar, EISCAT 3D. 
+                This board has been developed by students with support from EISCAT.
+            </p>
+            <p>
+                The <strong>CAM</strong> is the secondary payload and consists of a commercial off-the-shelf (COTS) CMOS camera and lens. 
+                It will be used to photograph the surface of the Earth. 
+                These images will mainly be used for outreach by LTU.
+            </p>
+            <p>
+                An intermediate board called the <strong>Step-Up board</strong> reroutes signals in the main connector stack due to space constraints.
+            </p>
+            <p>
+                Power is managed by the <strong>Electrical Power System (EPS)</strong>, another COTS component. 
+                It houses the satellite’s batteries, manages charging, and distributes power to the other satellite components.
+            </p>
+            <p>
+                The <strong>transceiver</strong> receives and routes telecommands and encodes telemetry. 
+                Communication is handled using the CubeSat Space Protocol (CSP).
+            </p>
+            <p>
+                The On-Board Software (OBSW) controls most satellite functionality and runs on the <strong>On-Board Computer (OBC)</strong>.
+            </p>
+            <p>
+                The <strong>antenna module</strong> is used for transmission of the ECAT signal as well as reception of telecommands and transmission of telemetry.
+            </p>
         </section>
-        
+
         <section class="content">
             <h2>Primary Payload</h2>
             <p><strong>ECAT board</strong></p>
             <img src="images/ECAT.png" alt="APTAS ECAT" class="aptas-cam">
             <ul>
-                <li>Developed according to EISCAT's requirements</li>
-                <li>Generates a precise 233 MHz reference signal which will be used for antenna calibration of EISCAT 3D</li>
-                <li>Designed, manufactured, and assembled by our studentsin Kiruna</li>
+                <li>Developed according to EISCAT’s specifications</li>
+                <li>Generates a precise 233 MHz reference signal for antenna calibration of EISCAT 3D</li>
+                <li>Designed, manufactured, and assembled by students in Kiruna</li>
             </ul>
         </section>
-        
+
         <section class="content">
             <h2>Secondary Payload</h2>
-            <p><strong>Camera</strong></p>
+            <p><strong>CAM</strong></p>
             <img src="images/APTASCAM.png" alt="APTAS CAM" class="aptas-cam">
             <ul>
-                <li>Additional payload for the satellite</li>
-                <li>Testing capabilities of capturing images of the Earth and auroras from orbit</li>
+                <li>Demonstrates the capability to capture images of the Earth and high-latitude atmospheric phenomena, such as aurora, from orbit</li>
+                <li>Used for outreach activities</li>
             </ul>
         </section>
-        
-        <section class="content">
-            <h2>Our Teams</h2>
-            <h3>Mechanical & Electrical</h3>
-            <ul>
-                <li>Our engineering team, that actually builds the satellite</li>
-                <li>They design and manufacture the satellite’s components and integrate them</li>
-                <li>The team also tests the system at whole as well as all its subsystems through their paces</li>
-            </ul>
-            <h3>Communications</h3>
-            <ul>
-                <li>Our Communications team makes sure, that our satellite listens to us</li>
-                <li>They are devoloping a ground station at the university’s campus</li>
-                <li>They implement and test telecommands  and the satellites communication</li>
-            </ul>
-            <h3>OBDH & ADCS</h3>
-            <ul>
-                <li>Responsible for designing the software of the satellite</li>
-                <li>Taking care of onboard data handling</li>
-                <li>Writing the attitude control software to keep the satellite in its place</li>
-            </ul>
+
+        <section class="content">   
+            <h2>How do I join?</h2>
+            <p>
+                At the start of each semester, GSO hosts a kickoff event where the projects are presented and students at the Space Campus can sign up for interviews. 
+                This is the primary recruitment channel, but you are also welcome to contact us in person or via email to express your interest in joining.
+            </p>
         </section>
         
         <section class="content">
@@ -154,6 +165,7 @@
             </a>
           </section>
         </section>
+
         <section class="content">
             <h2>Contact us</h2>
             
@@ -168,7 +180,7 @@
                     <img src="images/email.png" alt="Email" class="logo">
                 </a>
             </section>
-        </section>
+        </section> 
 </main>
 <footer>
     <p>&copy; 2025 Giron Space</p>
