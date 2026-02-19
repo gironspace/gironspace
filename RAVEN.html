@@ -28,6 +28,11 @@
         width: 300px; /* Adjusts image size */
         height: auto; /* Maintains aspect ratio */
     }
+
+    .sponsor-logo {
+        width: 150px; /* Adjusts image size */
+        height: auto; /* Maintains aspect ratio */
+    }
         </style>
 </head>
 <body>
@@ -58,15 +63,15 @@
         </ul>
     </nav>
 </main>
+
 <section class="aptas-section">
     <div class="aptas-content">
         <h2>Status</h2>
         <p><strong>Running since:</strong> 2020</p>
-        <p><strong>Number of students:</strong> 43</p>
+        <p><strong>Number of students:</strong> 37</p>
         <p><strong>Management:</strong>
         <ul>
-            <li>Elias Salvesen</li>
-            <li>Alexander Bülow</li>
+            <li>Gustavo Neves</li>
         </ul>
         </p>
     </div>
@@ -74,11 +79,111 @@
 </section>
 <section class="content">
     <h2>Rocketry and Aerospace Vehicle Engineering in Norrbotten (RAVEN)</h2>
-    <p>RAVEN, Rocketry and Aerospace Vehicle Engineering in Norrbotten, is the first student rocket project at LTU Kiruna Campus. The project’s goal is to design, build, test and launch a hybrid rocket using paraffin wax as fuel and liquid nitrous oxide as the oxidizer. This initiative provides students with hands-on experience in rocket engineering and its sub-systems. The current focus is on testing a small-scale engine, URSA-1, with the aim of developing a flight-ready, more powerful engine.</p>
+    <p>RAVEN, Rocketry and Aerospace Vehicle Engineering in Norrbotten, is the first student rocket project at LTU Kiruna Campus. The project’s goal is to design, build, test and launch a hybrid rocket using paraffin wax as fuel and liquid nitrous oxide as the oxidizer. This initiative provides students with hands-on experience in rocket engineering and its sub-systems.</p>
+    <p> After a few years theorising, building and testing a small-scale engine, URSA-1, the team is now moving towards the conclusion of its prototype, having achieved: </p>
+    <ul>
+        <li>Goal of 1 kN thrust</li>
+        <li>Structural design closed</li>
+        <li>Flight ready engine design nearly done</li>
+        <li>Software and electronics tested and operational</li>
+    </ul>
 </section>
 <section class="content">
-    <h2>Our Team</h2>
+    <h2>Testing</h2>
+    <p>Beyond the work done in front of computers or in the lab, the team takes designing a rocket a step further, by applying the knowledge and adjustments made to the design to the real world by realising several tests, with these occurring almost every weekend.</p>
+    <p>Through the use of our testbench, a static test setup allows us to have the oxidiser bottles connected to all the piping, which, aided by a valve system, get released at upwards of 50bar towards our engine encompassing the fuel grain and igniters. This results in engine ignition causing a counteractive force, measured by our sensors implemented in the testbench, which have registered loads stabilizing above 1.1kN.</p>
+    <p>In the last couple of years the members of RAVEN have performed several different tests, namely:</p>
+    <ul>
+        <li>5 igniter tests</li>
+        <li>13 cold flow tests</li>
+        <li>22 hot fire tests</li>
+    </ul>
+    <p> (and counting...)
 </section>
+
+<section class="content">
+    <h2>Our Teams</h2>
+    <h3>Software</h3>
+    <p>In the software team, as the name suggests, we write all the software for the project. This encompasses a wide range of disciplines, from low-level device drivers, high performance network- and graphics code, to statistical analysis and post-processing. </p>
+    <p>We are just finishing up a major refactor of the code in the test bench, and will move on to the flight computer and automation once that is complete. </p>
+    <p>One of our major goals, except for writing functional code, is writing maintainable code. Experience in C, Python, and/or Git is nice to have, but not needed. Our code can be found on our <a href="https://github.com/KirunaRAVEN/Chapter2">Github</a></p>
+    <!--
+    Software is also responsible for updating the webside.
+    I am overworked and underfucked.
+    -->
+    <h3>Electronics</h3>
+    <p>Electronics is an essential part of any system, it turns the logic behind code and programming into instructions that the rest of the hardware can carry out. </p>
+    <p>At Raven, we have developed a trusty and proven platform for the existing test bench that takes care of both the “executing” (logic boards, relays, valves…) as well as the “measuring” (Sensors, communications with GS, etc). The current setup has been working with only minor interruptions for more than 10 cold-tests and numerous hot-tests. This platform has also been the foundation for newer and more reliable designs for our new test bench as well as for the rocket prototype itself. </p>
+    <p>Our ultimate goal is to provide the Raven Rocket with a reliable and trustworthy backbone that integrates all the systems necessary to deploy and launch the vehicle, while ensuring safe, efficient and intuitive operation. For such a goal, new applicants with solid knowledge in electronics and system integration are always welcome.</p>
+    <!--
+    <img src="images/raven.png" alt="RAVEN Logo" class="aptas-logo">
+    <p> Power Board </p>
+    <img src="images/raven.png" alt="RAVEN Logo" class="aptas-logo">
+    <p> Arduino Portenta Breakout Board </p>
+    -->
+    <h3>Injector</h3>
+    <p>The injector team is responsible for designing the injector for our hybrid rocket engine. The injector plays a key role in controlling how the nitrous oxide is injected into the combustion chamber and how well it interacts with the fuel, which directly affects combustion stability, engine efficiency, and overall engine performance. Our work is closely connected to the engine team, and testing activities.</p>
+    <p>Currently, we are in the design phase of the injector, where we are working on sizing and tweaking injector geometry and parameters, comparing different injector concepts, and developing CAD models, while also using analytical models validated during testing to guide our design choices. In previous testing campaigns, the team has investigated different injector designs and concepts and conducted cold-flow and hot-fire testing, which helped us better understand the system and improve our design. This iterative testing and development of the injector let us increase our engine's thrust above our target of 1 kilonewton.</p>
+    <p>The next step in injector design is to refine our understanding of the propellant's state at different locations inside the propulsion system as well as improve overall engine efficiency by tweaking the design in close cooperation with the engine team.</p>
+    <p>New members in the injector team get involved in a wide range of tasks, including calculations, CAD design, test preparation, and analyzing test data. We are looking for motivated students who are interested in propulsion, thermodynamics, fluid dynamics or hands-on engineering work.</p>
+    <img src="images/raven_machdiamonds.png" alt="RAVEN Logo" class="aptas-logo">
+    <p> Mach Diamonds </p>
+
+    <h3> Engine </h3>
+    <p>In the Engine subteam we are actively working to improve the performance and reliability of our hybrid rocket engine. Our work covers the entire propulsion system: from the combustion chamber and fuel grain to the nozzle. Together with the Injector subteam, we aim to enhance the engine as a whole, focusing primarily -but not exclusively- on optimising thrust output. </p>
+    <p>Our future objectives include a deeper study into the optimal fuel grain composition to achieve more efficient combustion and a lower regression rate, as well as the development of a post-combustion chamber and a new nozzle geometry.</p>
+    <p>We are looking for motivated students with an interest in fluid dynamics, combustion processes or propulsion design.</p>
+    <img src="images/raven_grain1.jpeg" alt="RAVEN Logo" class="aptas-logo">
+    <img src="images/raven_grain2.jpeg" alt="RAVEN Logo" class="aptas-logo">
+    <p> Fuel Grain Manufacturing </p>
+
+    <h3> Ox-tank </h3>
+    <p>The oxidizer tank subteam in Raven is responsible for the safe storage, pressurization, and delivery of the oxidizer (N₂O) to the engine for combustion. </p>
+    <p>A critical design of the oxidizer tank has been completed, consisting of a cylindrical body with two end caps sealed using O-rings. Structural and functional analyses have been performed using simulations to assess the feasibility and safety of the design. Current testing experience is based on direct feeding of oxidizer from ground bottles to the engine, without an onboard oxidizer tank. During these tests, external temperature sensors and heating blankets are used to control and monitor pressurization, an approach that will also be applied to the flight system. </p>
+    <p>A major ongoing focus of the subteam is the development of the piping and feed system. This includes the design of piping that enable safe filling, pressurization, monitoring, venting, and automatic disconnection between the Ground Support Equipment and the rocket. Some analyses required for full system validation are to be performed. We are currently in the process of identifying and contacting manufacturers for the oxidizer tank components.</p>
+    <p>We are looking for new members interested in rocket propulsion. Ideal recruits are motivated to work on analytical and simulation tasks, piping and system design, or procurement and communication with industrial partners. </p>
+    <p>Future goals of the subteam include finalizing the piping and feed system design, completing remaining simulation and analysis tasks, manufacturing, performing validation testing, and integrating the oxidizer system into the full rocket system.</p>
+
+    <h3>Test Bench </h3>
+    <p>The test bench as a role is maybe a bit different since there is not as much focus on development/design. More maintenance and assisting during test-days currently. One does however get to do a little bit of everything, electronics, pipings, mechanical stuff, software etc.</p>
+    <p>Current Status: Currently preparing (waiting for EL & SW) for the updated test bench 2.0. The new version has new and simpler electronics layout most importantly (currently a rat's nest).</p>
+    <p>Recent Milestones: Added obsidian+dewesoft for data collection, not sure about older milestones. </p>
+    <p>Future goals: To update and validate the new test bench. There is also the constant goal of ensuring the bench is in operational condition.</p>
+    <p>New recruits: Seeking recruits that are not afraid of working with their hands. Also good if they are familiar with handling common workshop tools. Availability on weekends is quite important here.</p>
+
+    <h3>Structures</h3>
+    <p>The Structures subteam is responsible for the mechanical design, structural integrity and manufacturability of the rocket airframe. This includes the nosecone, fins, structural supports, and the avionics and recovery shells, as well as their interfaces with propulsion and recovery systems.</p>
+    <p>So far, the team has successfully completed the preliminary requirements definition and first design iterations for the nosecone, fins, avionics and recovery shell, and several structural elements. These designs have been reviewed internally and submitted to GKN, and are currently being refined based on aerodynamic feedback, manufacturability considerations, and structural verification. The team is now transitioning from pure design work to engineering validation, focusing on load definition, structural sizing, and analysis.</p>
+    <p>At the moment, Structures is working on finalising open designs, defining critical load cases, and performing structural analyses to support the EuRoC 2026 application. Particular attention is being given to interfaces between subsystems and manufacturability (DFM).</p>
+    <p>We are currently looking for new recruits with an interest in mechanical design, CAD, structural analysis, and manufacturing processes. Experience with CAD tools (such as SolidWorks or NX), FEA, or composites is a plus, but motivation and willingness to learn are the most important qualities.</p>
+    <p>Looking ahead, the main goals of the Structures subteam are to freeze the structural design for the EuRoC 2026 submission, complete a solid verification campaign, and prepare the transition towards detailed design and manufacturing. New members will have the opportunity to work hands-on with real engineering problems and contribute directly to a flight-ready rocket structure.</p>
+    <img src="images/raven_fullrocket.jpg" alt="RAVEN Logo" class="aptas-logo">
+    <p> Full Rocket View </p>
+
+    <h3>Recovery</h3>
+    <p>The Recovery subteam is responsible for the safe deceleration, descent, and recovery of the rocket after flight. This includes the design and integration of the parachute system, deployment mechanisms, structural interfaces with the airframe, and the coordination with avionics for reliable triggering and sequencing.</p>
+    <p>So far, the team has completed the preliminary definition of recovery requirements and concepts, including recovery architecture, deployment strategy, and subsystem interfaces. Initial design work has been carried out for the recovery shell and its structural integration, and these designs have been reviewed and submitted to GKN as part of the preliminary design phase. The current focus is on refining the recovery system based on structural constraints, and mission requirements.</p>
+    <p>At the moment, the Recovery subteam is working on consolidating the preliminary design by finalising deployment concepts, validating load cases during parachute opening, and ensuring compatibility with the avionics and structural subsystems. Particular attention is being paid to reliability, redundancy, and compliance with EuRoC safety requirements.</p>
+    <p>We are currently looking for new recruits interested in mechanical design and experimental testing. Experience with CAD, basic structural analysis, or parachute and recovery systems is a plus, but motivation and a willingness to learn are the most important qualities.</p>
+    <p>Looking ahead, the main goals of the Recovery subteam are to freeze the recovery system design for the EuRoC 2026 application, perform verification through analysis and ground testing, and prepare the transition towards detailed design and manufacturing. New members will have the opportunity to work on a critical safety subsystem and gain hands-on experience in real aerospace engineering challenges.</p>    
+    <!--
+    <img src="images/raven.png" alt="RAVEN Logo" class="aptas-logo">
+    <p> Full Recovery Module </p>
+    <img src="images/raven.png" alt="RAVEN Logo" class="aptas-logo">
+    <p> Clamp Band </p> -->
+</section>
+
+<section class="content">
+    <h2>Our Team</h2>
+    <img src="images/raven_team.png" alt="Our Team">
+</section>
+
+<section class="content">
+    <h2>Sponsors</h2>
+    <img src="images/raven_gkn.png" alt="RAVEN Logo" class="sponsor-logo">
+    <img src="images/raven_swagelok.jpg" alt="RAVEN Logo" class="sponsor-logo">
+</section>
+
 <section class="content">
     <h2>Contact us</h2>
     <section class="logos-section">
