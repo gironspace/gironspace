@@ -6,7 +6,7 @@
     <title>Giron Space</title>
     <link href="style.css" rel="stylesheet" />
     <style>
-        .aptas-section {
+    .raven-section {
         display: flex;  /* Side-by-side layout */
         align-items: center; /* Center text and image vertically */
         gap: 20px;  /* Space between image and text */
@@ -15,7 +15,7 @@
         margin: 0 auto; /* Centers the section */
     }
     
-    .aptas-content {
+    .raven-content {
         max-width: 800px;
         margin: 0 auto;
         text-align: left;
@@ -24,7 +24,7 @@
         flex: 1;
     }
     
-    .aptas-logo {
+    .raven-logo {
         width: 300px; /* Adjusts image size */
         height: auto; /* Maintains aspect ratio */
     }
@@ -64,8 +64,8 @@
     </nav>
 </main>
 
-<section class="aptas-section">
-    <div class="aptas-content">
+<section class="raven-section">
+    <div class="raven-content">
         <h2>Status</h2>
         <p><strong>Running since:</strong> 2020</p>
         <p><strong>Number of students:</strong> 37</p>
@@ -75,7 +75,7 @@
         </ul>
         </p>
     </div>
-    <img src="images/raven.png" alt="RAVEN Logo" class="aptas-logo">
+    <img src="images/raven.png" alt="RAVEN Logo" class="raven-logo">
 </section>
 <section class="content">
     <h2>Rocketry and Aerospace Vehicle Engineering in Norrbotten (RAVEN)</h2>
@@ -115,28 +115,26 @@
     <p>Electronics is an essential part of any system, it turns the logic behind code and programming into instructions that the rest of the hardware can carry out. </p>
     <p>At Raven, we have developed a trusty and proven platform for the existing test bench that takes care of both the “executing” (logic boards, relays, valves…) as well as the “measuring” (Sensors, communications with GS, etc). The current setup has been working with only minor interruptions for more than 10 cold-tests and numerous hot-tests. This platform has also been the foundation for newer and more reliable designs for our new test bench as well as for the rocket prototype itself. </p>
     <p>Our ultimate goal is to provide the Raven Rocket with a reliable and trustworthy backbone that integrates all the systems necessary to deploy and launch the vehicle, while ensuring safe, efficient and intuitive operation. For such a goal, new applicants with solid knowledge in electronics and system integration are always welcome.</p>
-    <!--
-    <img src="images/raven.png" alt="RAVEN Logo" class="aptas-logo">
-    <p> Power Board </p>
-    <img src="images/raven.png" alt="RAVEN Logo" class="aptas-logo">
-    <p> Arduino Portenta Breakout Board </p>
-    -->
+
     <h3>Injector</h3>
     <p>The injector team is responsible for designing the injector for our hybrid rocket engine. The injector plays a key role in controlling how the nitrous oxide is injected into the combustion chamber and how well it interacts with the fuel, which directly affects combustion stability, engine efficiency, and overall engine performance. Our work is closely connected to the engine team, and testing activities.</p>
     <p>Currently, we are in the design phase of the injector, where we are working on sizing and tweaking injector geometry and parameters, comparing different injector concepts, and developing CAD models, while also using analytical models validated during testing to guide our design choices. In previous testing campaigns, the team has investigated different injector designs and concepts and conducted cold-flow and hot-fire testing, which helped us better understand the system and improve our design. This iterative testing and development of the injector let us increase our engine's thrust above our target of 1 kilonewton.</p>
     <p>The next step in injector design is to refine our understanding of the propellant's state at different locations inside the propulsion system as well as improve overall engine efficiency by tweaking the design in close cooperation with the engine team.</p>
     <p>New members in the injector team get involved in a wide range of tasks, including calculations, CAD design, test preparation, and analyzing test data. We are looking for motivated students who are interested in propulsion, thermodynamics, fluid dynamics or hands-on engineering work.</p>
-    <img src="images/raven_machdiamonds.png" alt="RAVEN Logo" class="aptas-logo">
-    <p> Mach Diamonds </p>
-
+    <div style="text-align: center;">
+        <img src="images/raven_machdiamonds.png" alt="Mach diamonds" class="raven-logo">
+        <p> Mach Diamonds </p>
+    </div>
     <h3> Engine </h3>
     <p>In the Engine subteam we are actively working to improve the performance and reliability of our hybrid rocket engine. Our work covers the entire propulsion system: from the combustion chamber and fuel grain to the nozzle. Together with the Injector subteam, we aim to enhance the engine as a whole, focusing primarily -but not exclusively- on optimising thrust output. </p>
     <p>Our future objectives include a deeper study into the optimal fuel grain composition to achieve more efficient combustion and a lower regression rate, as well as the development of a post-combustion chamber and a new nozzle geometry.</p>
     <p>We are looking for motivated students with an interest in fluid dynamics, combustion processes or propulsion design.</p>
-    <img src="images/raven_grain1.jpeg" alt="RAVEN Logo" class="aptas-logo">
-    <img src="images/raven_grain2.jpeg" alt="RAVEN Logo" class="aptas-logo">
-    <p> Fuel Grain Manufacturing </p>
-
+    <div style="text-align: center;">
+        <img src="images/raven_grain1.jpeg" alt="Fuel grain manufacturing" class="raven-logo">
+        <img src="images/raven_grain2.jpeg" alt="Fuel grain manufacturing" class="raven-logo">
+        <p> Fuel Grain Manufacturing </p>
+    </div>
+    
     <h3> Ox-tank </h3>
     <p>The oxidizer tank subteam in Raven is responsible for the safe storage, pressurization, and delivery of the oxidizer (N₂O) to the engine for combustion. </p>
     <p>A critical design of the oxidizer tank has been completed, consisting of a cylindrical body with two end caps sealed using O-rings. Structural and functional analyses have been performed using simulations to assess the feasibility and safety of the design. Current testing experience is based on direct feeding of oxidizer from ground bottles to the engine, without an onboard oxidizer tank. During these tests, external temperature sensors and heating blankets are used to control and monitor pressurization, an approach that will also be applied to the flight system. </p>
@@ -157,20 +155,17 @@
     <p>At the moment, Structures is working on finalising open designs, defining critical load cases, and performing structural analyses to support the EuRoC 2026 application. Particular attention is being given to interfaces between subsystems and manufacturability (DFM).</p>
     <p>We are currently looking for new recruits with an interest in mechanical design, CAD, structural analysis, and manufacturing processes. Experience with CAD tools (such as SolidWorks or NX), FEA, or composites is a plus, but motivation and willingness to learn are the most important qualities.</p>
     <p>Looking ahead, the main goals of the Structures subteam are to freeze the structural design for the EuRoC 2026 submission, complete a solid verification campaign, and prepare the transition towards detailed design and manufacturing. New members will have the opportunity to work hands-on with real engineering problems and contribute directly to a flight-ready rocket structure.</p>
-    <img src="images/raven_fullrocket.jpg" alt="RAVEN Logo" class="aptas-logo">
-    <p> Full Rocket View </p>
-
+    <div style="text-align: center;">
+        <img src="images/raven_fullrocket.jpg" alt="Full Rocket View" class="raven-logo">
+        <p> Full Rocket View </p>
+    </div>
     <h3>Recovery</h3>
     <p>The Recovery subteam is responsible for the safe deceleration, descent, and recovery of the rocket after flight. This includes the design and integration of the parachute system, deployment mechanisms, structural interfaces with the airframe, and the coordination with avionics for reliable triggering and sequencing.</p>
     <p>So far, the team has completed the preliminary definition of recovery requirements and concepts, including recovery architecture, deployment strategy, and subsystem interfaces. Initial design work has been carried out for the recovery shell and its structural integration, and these designs have been reviewed and submitted to GKN as part of the preliminary design phase. The current focus is on refining the recovery system based on structural constraints, and mission requirements.</p>
     <p>At the moment, the Recovery subteam is working on consolidating the preliminary design by finalising deployment concepts, validating load cases during parachute opening, and ensuring compatibility with the avionics and structural subsystems. Particular attention is being paid to reliability, redundancy, and compliance with EuRoC safety requirements.</p>
     <p>We are currently looking for new recruits interested in mechanical design and experimental testing. Experience with CAD, basic structural analysis, or parachute and recovery systems is a plus, but motivation and a willingness to learn are the most important qualities.</p>
     <p>Looking ahead, the main goals of the Recovery subteam are to freeze the recovery system design for the EuRoC 2026 application, perform verification through analysis and ground testing, and prepare the transition towards detailed design and manufacturing. New members will have the opportunity to work on a critical safety subsystem and gain hands-on experience in real aerospace engineering challenges.</p>    
-    <!--
-    <img src="images/raven.png" alt="RAVEN Logo" class="aptas-logo">
-    <p> Full Recovery Module </p>
-    <img src="images/raven.png" alt="RAVEN Logo" class="aptas-logo">
-    <p> Clamp Band </p> -->
+
 </section>
 
 <section class="content">
@@ -180,8 +175,8 @@
 
 <section class="content">
     <h2>Sponsors</h2>
-    <img src="images/raven_gkn.png" alt="RAVEN Logo" class="sponsor-logo">
-    <img src="images/raven_swagelok.jpg" alt="RAVEN Logo" class="sponsor-logo">
+    <img src="images/raven_gkn.png" alt="GKN Logo" class="sponsor-logo">
+    <img src="images/raven_swagelok.jpg" alt="Swagelok Logo" class="sponsor-logo">
 </section>
 
 <section class="content">
