@@ -1,165 +1,977 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giron Space</title>
-    <link href="style.css" rel="stylesheet" />
-    <style>
-    .mara-section {
-        display: flex;  /* Side-by-side layout */
-        align-items: center; /* Center text and image vertically */
-        gap: 20px;  /* Space between image and text */
-        justify-content: space-between; /* Ensures spacing */
-        max-width: 800px;  /* Limits section width */
-        margin: 0 auto; /* Centers the section */
-    }
-    
-    .mara-content {
-        max-width: 800px;
-        margin: 0 auto;
-        text-align: left;
-        display: flex;
-        flex-direction: column; /* Stack text vertically */
-        flex: 1;
-    }
-    
-    .mara-logo {
-        width: 300px; /* Adjusts image size */
-        height: auto; /* Maintains aspect ratio */
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    header {
-    background-color: #FF5F15;
-    }
+<title>MARA - Mission for Asteroid Resource Acquisition</title>
 
-    nav {
-    background-color: #CC4C11;
-    }
 
-    footer {
-    background-color: #FF5F15;
-    }
 
-    
-    </style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* GLOBAL */
+
+body{
+margin:0;
+font-family:'Inter', sans-serif;
+color:#1a1a1a;
+line-height:1.7;
+background:#FFEEE6;
+}
+
+main{
+max-width:1200px;
+margin:auto;
+padding:60px 25px;
+}
+
+
+/* NAVBAR */
+
+nav{
+background:rgba(255, 95, 21, 0.9);
+color:white;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav ul{
+margin:0;
+padding:0;
+list-style:none;
+display:flex;
+justify-content:center;
+}
+
+nav li{
+position:relative;
+}
+
+nav a{
+display:block;
+padding:16px 22px;
+color:white;
+text-decoration:none;
+font-size:0.95rem;
+letter-spacing:0.4px;
+}
+
+nav a:hover{
+background:#CC4C11;
+}
+
+.dropdown-content{
+display:none;
+position:absolute;
+background:#FFEEE6;
+min-width:180px;
+box-shadow:0 6px 14px rgba(0,0,0,0.25);
+}
+
+.dropdown-content a{
+color:black;
+}
+
+.dropdown:hover .dropdown-content{
+display:block;
+}
+
+
+/* HERO SECTION */
+
+.hero{
+
+height:80vh;
+background-image:url("images/mara.png");
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+
+color:white;
+position:relative;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+}
+
+.hero h1{
+font-size:3.5rem;
+margin:0;
+letter-spacing:2px;
+}
+
+.hero p{
+font-size:1.3rem;
+margin-top:15px;
+opacity:0.9;
+}
+
+
+/* MISSION FACTS */
+
+.mission-facts{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+margin-bottom:70px;
+}
+
+.fact{
+border-left:4px solid #FF5F15;
+padding-left:15px;
+}
+
+.fact h3{
+margin:0;
+font-size:0.9rem;
+text-transform:uppercase;
+letter-spacing:1px;
+color:#777;
+}
+
+.fact p{
+margin:5px 0 0 0;
+font-weight:600;
+}
+
+
+/* SECTION */
+
+.section{
+margin-bottom:70px;
+max-width:1200px;
+}
+
+.section h2{
+font-size:2rem;
+margin-bottom:20px;
+}
+
+.section p{
+margin-bottom:18px;
+}
+
+.section-row{
+display:flex;
+align-items:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.section-text{
+flex:2;
+min-width:400px;
+}
+
+.section-image{
+flex:1;
+text-align:center;
+}
+
+.section-image img{
+max-width:320px;
+height:auto;
+}
+
+/* Mobile layout */
+
+@media(max-width:800px){
+
+.section-row{
+flex-direction:column;
+text-align:center;
+}
+
+.section-team h2{
+    text-align: center;
+}
+
+}
+
+/* TEAM LIST */
+
+.team ul{
+padding-left:20px;
+}
+
+.team-group {
+    background: rgba(255, 95, 21, 0.05);
+    padding: 30px 20px;
+    margin-bottom: 50px;
+}
+
+.team-group h3 {
+  position: relative; /* needed for ::after positioning */
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 1.6rem;
+}
+
+.team-group h3::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;      /* distance below the header */
+  left: 10%;
+  width: 80%;        /* spans full section width */
+  height: 4px;        /* thickness of the line */
+  background-color: #FF5F15; /* orange line color */
+  border-radius: 2px; /* optional: rounded edges */
+}
+
+.team-group img{
+max-width:800px;
+width: auto;
+margin: 0 auto;
+display: block;
+border-radius:8px;
+box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Grid for individual members */
+.team-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+gap:40px;
+}
+
+/* Individual card */
+.team-member{
+text-align:center;
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-member img{
+width:150px;
+height:150px;
+object-fit:cover;
+border-radius:50%;
+box-shadow:0 2px 8px rgba(0,0,0,0.2);
+margin-bottom:15px;
+margin-top: 15px;
+}
+
+.team-member h4{
+margin:5px 0;
+font-size:1.1rem;
+}
+
+.team-member p{
+font-size:0.9rem;
+color:#555;
+}
+
+/* Hover effect */
+.team-member:hover{
+transform:translateY(-5px);
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* SPONSORS */
+
+.sponsors{
+text-align:center;
+margin-top:60px;
+}
+
+.sponsor-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:50px;
+align-items:center;
+margin-top:40px;
+}
+
+.sponsor-grid img{
+max-width:200px;
+margin:auto;
+filter:grayscale(100%);
+opacity:0.8;
+transition:0.3s;
+}
+
+.sponsor-grid img:hover{
+filter:none;
+opacity:1;
+transform:scale(1.05);
+}
+
+
+/* SOCIAL */
+
+.contact-icons{
+display:flex;
+gap:30px;
+margin-top:20px;
+}
+
+.contact-icons img{
+width:60px;
+transition:0.2s;
+}
+
+.contact-icons img:hover{
+transform:scale(1.2);
+}
+
+
+/* FOOTER */
+
+footer{
+background:#FF5F15;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:80px;
+font-size:0.9rem;
+}
+
+/* CALL TO ACTION BUTTON */
+.cta-button{
+  position: absolute;
+  bottom: 10px;               
+  left: 50%;
+  transform: translateX(-50%);
+  padding:10px 24px;
+  background-color: rgba(255, 95, 21, 0.4);
+  color: #fff;
+  font-weight:500;
+  font-size:0.95rem;
+  text-decoration:none;
+  border-radius:6px;
+  border:1px solid rgba(255,255,255,0.6);
+  transition: all 0.3s ease;
+  z-index:2;
+}
+
+.cta-button:hover{
+  background-color: rgba(255,255,255,0.35); /* slightly brighter on hover */
+  transform: translateX(-50%) translateY(-2px);
+}
+
+#model{
+text-align:center;
+}
+
+#model h2 {
+  position: relative;       /* needed for ::after positioning */
+  text-align: center;       /* optional: center title */
+  margin-bottom: 40px;      /* space between title and content */
+}
+
+#model h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;            /* distance below the h2 */
+  left: 0;
+  width: 100%;              /* spans the full width of the section */
+  height: 4px;              /* thickness of the line */
+  background-color: #FF5F15; /* your orange color */
+  border-radius: 2px;       /* optional: slightly rounded edges */
+}
+
+.model-layout{
+display:grid;
+grid-template-columns: 1.5fr 1fr;
+gap:40px;
+align-items:start;
+margin-top:30px;
+}
+
+model-viewer{
+width:100%;
+height:600px;
+background-color:#0b0f1a;
+border-radius:10px;
+}
+
+.model-summary{
+font-size:0.95rem;
+line-height:1.7;
+}
+
+.model-summary ul{
+padding-left:20px;
+margin-top:15px;
+}
+
+.model-summary li{
+margin-bottom:15px;
+}
+
+.hotspot{
+background:#FF5F15;
+color:white;
+border:none;
+padding:6px 12px;
+border-radius:4px;
+font-size:0.8rem;
+cursor:pointer;
+box-shadow:0 2px 6px rgba(0,0,0,0.3);
+transition:0.2s;
+}
+
+.hotspot:hover{
+transform:scale(1.1);
+}
+
+.hidden{
+display:none;
+}
+
+/* Toggle button */
+
+.hotspot-toggle{
+background:#FF5F15;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:6px;
+font-size:0.9rem;
+cursor:pointer;
+margin-bottom:20px;
+transition:0.2s;
+}
+
+.hotspot-toggle:hover{
+background:#cc4c11;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+.hero{
+height:60vh;
+}
+
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+
+
+</style>
+
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
 </head>
+
 <body>
-    <header>
-        <h1>GSO - MARA</h1>
-    </header>
-    <nav>
-        <ul>
-            <li class="dropdown">
-                <a href="index.html">Home</a>
-                <div class="dropdown-content">
-                    <a href="index.html#sponsors">Partners and Sponsors</a>
-                    <a href="index.html#contact">Contact</a>
-                </div>
-            
-            </li>
-            <li class="dropdown">
-                <a href="#">Projects</a>
-                <div class="dropdown-content">
-                    <a href="APTAS.html">APTAS</a>
-                    <a href="GLITCH.html">GLITCH</a>
-                    <a href="RAVEN.html">RAVEN</a>
-                    <a href="MARA.html">MARA</a>
-                    <a href="INSITE.html">INSITE</a>  
-                    <a href="old.html">Old Projects</a>
-                </div>
-            </li>
-            <li><a href="news.html">News</a></li>
-        </ul>
-    </nav>
-    </main>
-        <section class="mara-section">
-            <div class="mara-content">
-                <h2>Status</h2>
-                <p><strong>Running since:</strong> 2025 </p>
-                <p><strong>Number of students:</strong> 10</p>
-                <p><strong>Management:</strong>
-                <ul>
-                    <li>Elias Simpson</li>
-                    <li>Pontus Staaf</li>
-                </ul>
-                </p>
-            </div>
-            <img src="images/mara.png" alt="MARA Logo" class="mara-logo">
-        </section>
-        <section class="content">
-            <h2>Our Mission</h2>
-            
-            <p> MARA (Mission for Asteroid Resource Acquisition) is an asteroid mining experiment created by students of LTU (Luleå University of Technology). 
-                MARA aims to investigate the feasibility of core drilling as a method of material acquisition in reduced gravity while studying the thermal properties of asteroid drilling.
-            </p>
-            
-            <p> Realising this experiment includes producing a realistic asteroid simulant which can be drilled and extracted within the time constraints of the REXUS mission. It also includes designing, constructing, testing the drilling rig and analysing the results to provide insight into the
-                heat transfer, mechanical performance and scalability of the experiment for future asteroid mining technologies.
-            </p>
-        </section>
 
-        <section class="content">
-            <h2>REXUS/BEXUS</h2>
-            <p>MARA is a shortlisted project in the REXUS/BEXUS programme and aspires to fly on the RX37/38 sounding rocket in 2026.</p> 
-           
-            <p>REXUS/BEXUS is a student experiment programme financed by the Swedish National Space Agency and the German Aerospace Centre with support from the European Space Agency – ESA, the Swedish Space Corporation – SSC, ZARM and more.</p>
-        </section>
 
-        <section class="content"> 
-            <h2>Our Team</h2>
-            <p>MARA is compromised by motivated and inspired students from LTU. The team is subdivided into 5 different sub-teams with varying focuses and areas of responsibility.
-            <ul>
-                <li><strong>Management Team</strong></li>
-                    The project management team is responsible for the overall planning, coordination and execution of the MARA project. They ensure that all teams are aligned with the project goals and timelines while managing the MARA outreach programme and communication. 
-                
-                <li><strong>Mechanical Team</strong></li>
-                    The mechanical team focuses on the design, development and testing of the drilling rig and other mechanical components of the experiment. They need to ensure that the rig can be integrated into the REXUS filght module while meeting all mechanical and structural requirements of the MARA experiment.
-                
-                <li><strong>Electrical Team</strong></li>
-                    The electrical team is responsible for the design and implementation of the electrical systems. This includes power management, sensors and data acquisition. The electrical team works closely with both the mechanical and software teams to ensure proper integration of all systems.
-                
-                <li><strong>Software Team</strong></li>
-                    The software team develops the software required for data collection, control systems and communication with the experiment during the flight. They ensure that the software is reliable and that data is accurately recorded and saved.
-                
-                <li><strong>Science Team</strong></li>
-                    The science team is in charge of defining the scientific objectives, designing experiment and testing protocols and analyzing the data collected during the mission. Science team members work closely with all other teams to ensure that the experiment meets its scientific goals.
-            </ul>
-            </p>
-        </section>
+<nav>
 
-        <section class="content"> 
-            <h2>Sponsors</h2>
-            <p>The MARA project is made possible by the support of:
-            <ul>
-                <li>Luleå University of Technology (LTU)</li>
-                <li>Giron Space Organisation</li>
-            </ul>
-            </p>
+<ul>
 
-            <p> If you are interested in MARA and want to contribute. Please reach out to us by the contact information listed below. </p>
-        </section>
+<li class="dropdown">
+<a href="index.html">Home</a>
+<div class="dropdown-content">
+<a href="index.html#sponsors">Partners and Sponsors</a>
+<a href="index.html#contact">Contact</a>
+</div>
+</li>
 
-        <section class="content"> 
-            <h2>Contact Us</h2>
-            <section class="logos-section">
-                <a href="https://www.instagram.com/mara.rexus" target="_blank">
-                    <img src="images/ig.png" alt="IG" class="logo">
-                </a>
-                <a href="https://www.linkedin.com/company/mara-rexus/?viewAsMember=true" target="_blank">
-                    <img src="images/LI.png" alt="LI" class="logo">
-                </a>
-                <a href="mailto:rexus.mara@gmail.com" target="_blank">
-                    <img src="images/email.png" alt="Email" class="logo">
-                </a>
-                <a href="https://www.tiktok.com/@mara.rexus" target="_blank">
-                    <img src="images/tiktok.png" alt="TikTok" class="logo">
-                </a>
-            </section>
-        </section>
+<li class="dropdown">
+<a href="#">Projects</a>
+<div class="dropdown-content">
+<a href="APTAS.html">APTAS</a>
+<a href="FENRIR.html">FENRIR</a>
+<a href="GLITCH.html">GLITCH</a>
+<a href="RAVEN.html">RAVEN</a>
+<a href="MARA.html">MARA</a>
+<a href="old.html">Old Projects</a>
+</div>
+</li>
+
+<li><a href="news.html">News</a></li>
+
+</ul>
+
+</nav>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+<h1>MARA</h1>
+<p>Mission for Asteroid Resource Acquisition</p>
+</div>
+
+
+<a href="#contact" class="cta-button">Get in Touch</a>
+
+
+</section>
+
+
+
+<main>
+
+
+<!-- MISSION FACTS -->
+
+<section class="mission-facts" id="facts">
+
+<div class="fact">
+<h3>Running since</h3>
+<p>2025</p>
+</div>
+
+<div class="fact">
+<h3>Students</h3>
+<p>17</p>
+</div>
+
+<div class="fact">
+<h3>Rocket</h3>
+<p>REXUS 38 launching March 2027</p>
+</div>
+
+<div class="fact">
+<h3>Institution</h3>
+<p>Luleå University of Technology</p>
+</div>
+
+</section>
+
+
+<!-- MISSION -->
+
+<section class="section" id="mission">
+
+<div class="section-row">
+
+<div class="section-text">
+
+<h2>Mission</h2>
+
+<p>
+MARA (Mission for Asteroid Resource Acquisition) is an asteroid mining experiment developed by students of Luleå University of Technology.
+</p>
+
+<p>
+The project simulates the material acquisition of an asteroid while investigating the use of core drilling as a method for resource extraction in space-like environments.
+</p>
+
+<p>
+    MARA is a REXUS/BEXUS project set to fly on REXUS 38 in March 2026.
+</p>
+
+<p>
+The experiment includes producing an autonomous drilling rig as well as a realistic asteroid simulant that can be drilled and extracted within the 120s time constraint of a REXUS sounding rocket mission.
+</p>
+
+<p>
+By analysing drilling performance and heat transfer, MARA aims to provide insight into the scalability of future asteroid mining technologies.
+</p>
+
+</div>
+
+<div class="section-image">
+<img src="images/mara.png" alt="MARA logo">
+</div>
+
+</div>
+
+</section>
+
+<section class="section model-section" id="model">
+
+<h2>3D Model</h2>
+
+<div class="model-layout">
+
+<model-viewer
+src="images/MARA/MARA_model.glb"
+orientation="0deg 0deg -60deg"
+camera-controls
+auto-rotate
+environment-image="neutral"
+shadow-intensity="1">
+
+<!-- Hotspot 1: Moving Platform -->
+<button slot="hotspot-1"
+        data-position="5 13 0.01"
+        data-normal="0 1 0"
+        class="hotspot hidden">
+  Moving Platform
+</button>
+
+<!-- Hotspot 2: Asteroid Simulant Holder -->
+<button slot="hotspot-2"
+        data-position="0 4 0"
+        data-normal="0 1 0"
+        class="hotspot hidden">
+  ASH
+</button>
+
+<!-- Hotspot 3: Drill -->
+<button slot="hotspot-3"
+        data-position="0 9 -0.1"
+        data-normal="0 1 0"
+        class="hotspot hidden">
+  Drill
+</button>
+
+<!-- Hotspot 4: Sample Chamber -->
+<button slot="hotspot-4"
+        data-position="8 4 0"
+        data-normal="0 1 0"
+        class="hotspot hidden">
+  Sample Chamber
+</button>
+
+</model-viewer>
+
+<div class="model-summary">
+
+<p><strong>MARA 3D Model</strong></p>
+
+<p>
+The model shows the current design of the MARA experiment and highlights the major structural and scientific components.
+</p>
+
+<button id="toggleHotspots" class="hotspot-toggle">
+Show Hotspots
+</button>
+
+<ul>
+
+<li><strong>Moving Platform</strong> - travels along guide rails using a lead screw driven by a linear motor.</li>
+
+<li><strong>Asteroid Simulant Holder (ASH)</strong> - detachable container that houses the asteroid simulant for late integration.</li>
+
+<li><strong>Drill Assembly</strong> - drill and drill bit used to penetrate the simulant and capture a core sample.</li>
+
+<li><strong>Sample Chamber</strong> - sealed housing around the ASH containing sensors and preventing dust from escaping.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- REXUS -->
+
+<section class="section" id="rexusbexus">
+
+<div class="section-row">
+
+<div class="section-text">
+
+<h2>REXUS/BEXUS Programme</h2>
+
+<p>
+MARA is a part of the <a href="https://rexusbexus.net" target="_blank">REXUS/BEXUS programme</a>. The REXUS/BEXUS programme is an initiative of the Swedish National Space Agency (SNSA) and the German Aerospace Center (DLR) in collaboration with the European Space Agency (ESA).
+</p>
+<p>
+    The programme provides university students all over Europe with the opportunity to design and fly scientific or technological experiments on sounding rockets (REXUS) or stratospheric balloons (BEXUS). Each year, two rockets and two balloons are launched from Esrange Space Center in Sweden and carries up to 20 student experiments.
+</p>
+
+</div>
+
+<div class="section-image">
+<img src="images/RexBexLogo-highRes.png" alt="REXUS BEXUS logo">
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- TEAM -->
+
+<section class="section" id="team">
+
+<h2>The Team</h2>
+    <p>MARA consists of 17 students from Luleå University of Technology, divided into 5 teams: Management, Electrical, Mechanical, Science and Software. The team is multidisciplinary, with backgrounds in engineering, physics and computer science. Together we represent a diverse and talented group of individuals dedicated to the success of the MARA project.</p>
+
+<!-- Group Photo -->
+<div class="team-group">
+    <img src="images/MARA/MARA_Team.JPG" alt="MARA Team Group Photo">
+</div>
+
+<!-- Individual Team Members -->
+
+<div class="team-group">
+    <h3>Management Team</h3>
+    <div class="team-grid" id="Management team">
+
+        <div class="team-member">
+            <img src="images/MARA/Elias (2).JPG" alt="Elias Simpson">
+            <h4>Elias Simpson</h4>
+            <p>Management Team - Project Manager</p>
+        </div>
+
+        <div class="team-member">
+            <img src="images/MARA/Pontus.JPG" alt="Pontus Staaf">
+            <h4>Pontus Staaf</h4>
+            <p>Management Team - System Engineer</p>
+        </div>
+    </div>
+</div>  
+
+<div class="team-group">
+    <h3>Electrical Team</h3>
+    <div class="team-grid" id="Electrical team">
+
+        <div class="team-member">
+            <img src="images/MARA/Tor.JPG" alt="Tor Sunnerdahl">
+            <h4>Tor Sunnerdahl</h4>
+            <p>Electrical Team - Head of Electrical</p>
+        </div>
+
+        <div class="team-member">
+            <img src="images/MARA/Julia.JPG" alt="Julia Bjureus">
+            <h4>Julia Bjureus</h4>
+            <p>Electrical Team</p>
+        </div>    
+        
+        <div class="team-member">
+            <img src="images/MARA/Alex.JPG" alt="Alex Holmberg">
+            <h4>Alexander Holmberg</h4>
+            <p>Electrical Team</p>
+        </div>
+    </div>  
+</div>
+
+<div class="team-group">
+    <h3>Mechanical Team</h3>
+    <div class="team-grid" id="Mechanical team">
+
+        <div class="team-member">
+            <img src="images/MARA/Liam (2).JPG" alt="Mechanical Team">
+            <h4>Liam Rathsman</h4>
+            <p>Mechanical Team - Head of Mechanical</p>
+        </div>
+
+        <div class="team-member">
+            <img src="images/MARA/Celia (2).JPG" alt="Celia Ojéda Sanchez">
+            <h4>Celia Ojéda Sanchez </h4>
+            <p>Mechanical Team</p>
+        </div>
+
+        <div class="team-member">
+            <img src="images/MARA/Fabian.png" alt="Mechanical Team">
+            <h4>Fabian Mozart</h4>
+            <p>Mechanical Team</p>
+        </div>
+    </div>
+</div>  
+
+
+<div class="team-group">
+    <h3>Science Team</h3>
+    <div class="team-grid" id="Science team">
+
+        <div class="team-member">
+            <img src="images/MARA/Blue.JPG" alt="Science Team">
+            <h4>Blue Bariagaber </h4>
+            <p>Science team - Head of Science</p>
+        </div>
+
+        <div class="team-member">
+            <img src="images/MARA/Eve.JPG" alt="Evelina Andersson">
+            <h4>Evelina Andersson</h4>
+            <p>Science Team</p>
+        </div>
+
+        <div class="team-member">
+            <img src="images/MARA/Manne (2).JPG" alt="Manne Sandberg">
+            <h4>Manne Sandberg</h4>
+            <p>Science Team</p>
+        </div>   
+
+        <div class="team-member">
+            <img src="images/MARA/Eliott.JPG" alt="Eliott Billaud">
+            <h4>Eliott Billaud</h4>
+            <p>Science Team</p>
+        </div>   
+
+    </div>
+</div>  
+<div class="team-group">
+    <h3>Software Team</h3>
+    <div class="team-grid" id="Software team">
+
+        <div class="team-member">
+            <img src="images/MARA/John.JPG" alt="Software Team">
+            <h4>John Carlsson</h4>
+            <p>Software team - Head of Software</p>
+        </div>
+
+        <div class="team-member">
+            <img src="images/MARA/Filip.JPG" alt="Filip Sowa">
+            <h4>Filip Sowa</h4>
+            <p>Software Team</p>
+        </div>
+
+        <div class="team-member">
+            <img src="images/MARA/Imanol (2).JPG" alt="Imanol Gutiérrez Pinedo">
+            <h4>Imanol Gutiérrez Pinedo</h4>
+            <p>Software Team</p>
+        </div>
+
+        <div class="team-member">
+            <img src="images/MARA/Aurora.JPG" alt="Aurora Åhs">
+            <h4>Aurora Åhs</h4>
+            <p>Software Team</p>
+        </div>
+
+        <div class="team-member">
+            <img src="images/mara.png" alt="Clara Öberg">
+            <h4>Clara Öberg</h4>
+            <p>Software Team</p>
+        </div>
+    </div>
+</div>
+
+</section>
+
+
+
+<!-- SPONSORS -->
+
+<section class="sponsors" id="sponsors">
+
+<h2>Partners & Sponsors</h2>
+
+<p>MARA is made possible through the support of our partners and sponsors. We are grateful for their contributions and collaboration in making this project a reality.</p> 
+
+<div class="sponsor-grid">
+
+<a href="https://rexusbexus.net">
+<img src="images/RexBexLogo-highRes.png" alt="REXUS/BEXUS">
+</a>
+
+<a href="https://www.rymdstyrelsen.se">
+<img src="images/RS_logotyp_pos_rgb-01.svg" alt="Rymdstyrelsen">
+</a>
+
+<a href="https://www.dlr.de">
+<img src="images/DLR_AR_kurz_EN_bk.png" alt="DLR">
+</a>
+
+<a href="https://www.esa.int">
+<img src="images/ESA_logo_2020_Deep.png" alt="ESA">
+</a>
+</div>
+
+<div class="sponsor-grid">
+
+<a href="https://www.ltu.se">
+<img src="images/Luleå tekniska universitet_idVx-x6a2e_0.png" alt="LTU">
+</a>
+
+<a href="https://gironspace.org">
+<img src="images/GSO_no_background.png" alt="Giron Space Organisation">
+</a>
+
+<a href="https://www.ansys.com">
+<img src="images/ANSYS_logo.png" alt="ANSYS">
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section class="section" id="contact">
+
+<h2>Contact</h2>
+
+<p>For inquiries about the project or collaboration opportunities, please reach out to us through the following channels:</p>
+
+<div class="contact-icons">
+
+<a href="https://www.instagram.com/mara.rexus">
+<img src="images/ig.png">
+</a>
+
+<a href="https://www.linkedin.com/company/mara-rexus">
+<img src="images/LI.png">
+</a>
+
+<a href="mailto:rexus.mara@gmail.com">
+<img src="images/email.png">
+</a>
+
+<a href="https://www.tiktok.com/@mara.rexus">
+<img src="images/tiktok.png">
+</a>
+
+</div>
+
+</section>
+
 </main>
+
+
 <footer>
-    <p>&copy; 2025 Giron Space</p>
+© 2025 Giron Space Organisation
 </footer>
+
+
+<script>
+
+const toggleButton = document.getElementById("toggleHotspots");
+const hotspots = document.querySelectorAll(".hotspot");
+
+let visible = false;
+
+toggleButton.addEventListener("click", () => {
+
+visible = !visible;
+
+hotspots.forEach(h => {
+h.classList.toggle("hidden");
+});
+
+toggleButton.textContent = visible ? "Hide Hotspots" : "Show Hotspots";
+
+});
+
+</script>
+
 </body>
+
+
 </html>
+
